@@ -5,7 +5,7 @@ import { assets } from '../assets/assets';
 import RelatedProducts from '../components/RelatedProducts';
 const product = () => {
   const { product_id } = useParams();
-  const { products ,currency} = useContext(ShopContext);
+  const { products ,currency,addToCard} = useContext(ShopContext);
   const [product, setProduct] = useState(false);
   const [image, setImage] = useState('');
   const [size, setSize] = useState('');
