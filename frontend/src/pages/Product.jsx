@@ -18,7 +18,6 @@ const product = () => {
       }
     })
   }
-  console.log(product);
   useEffect(() => {
     fetchProduct();
   }, [product_id, products])
@@ -58,7 +57,7 @@ const product = () => {
               }
             </div>
         </div>
-        <button className='text-sm py-3 px-8 bg-black cursor-pointer text-white active:bg-gray-700'>ADD TO CART</button>
+        <button onClick={() => addToCard(product._id,size)} className='text-sm py-3 px-8 bg-black cursor-pointer text-white active:bg-gray-700'>ADD TO CART</button>
         <hr className='mt-8 sm:w-4/5'/>
         <div className='text-sm text-gray-500 mt-5 flex flex-col gap-1'>
           <div className='flex items-center gap-2'>
