@@ -1,6 +1,7 @@
 import React from 'react'
 
-function Login() {
+const Login = () => {
+  const [currState,setCurrState]=useState('Sign Up');
   return (
     <div>Login</div>
   )
