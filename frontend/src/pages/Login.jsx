@@ -1,17 +1,21 @@
-import React,{useState} from 'react'
+import React,{useEffect, useState} from 'react'
 import { Form } from 'react-router-dom';
 
 const Login = () => {
   const [currState,setCurrState]=useState('Login');
+  const submitForm = async (e)=>{
+    e.preventDefault();
+    
+  }
   return (
-    <form className='flex flex-col items-center w-[90%] sm:max-w-96 m-auto mt-14 gap-4 text-gray-800'>
+    <form onSubmit={submitForm} className='flex flex-col items-center w-[90%] sm:max-w-96 m-auto mt-14 gap-4 text-gray-800'>
       <div className='inline-flex items-center gap-2 mb-2 mt-10'>
         <p className='prata-regular text-3xl'>{currState}</p>
         <hr className='border-none h-[1.5px] w-8 bg-gray-800' />
       </div>
-      {currState==='Login' ? null : <input type="text" placeholder='Name' className='w-full border border-gray-800 rounded px-3 py-2' />}
-      <input type="email" placeholder='Email' className='w-full border border-gray-800 rounded px-3 py-2' />
-      <input type="password" placeholder='Password' className='w-full border border-gray-800 rounded px-3 py-2' />
+      {currState==='Login' ? null : <input type="text" placeholder='Name' className='w-full border border-gray-800 rounded px-3 py-2' required/>}
+      <input type="email" placeholder='Email' className='w-full border border-gray-800 rounded px-3 py-2' required/>
+      <input type="password" placeholder='Password' className='w-full border border-gray-800 rounded px-3 py-2' required/>
       <div className='w-full flex justify-between text-sm mt-[-8px]'>
         <p className='cursor-pointer'>Forgot password?</p>
         {currState==='Login' ? 
