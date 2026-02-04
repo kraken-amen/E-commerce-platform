@@ -19,7 +19,7 @@ const Contact = () => {
           <button className='cursor-pointer border borde-black px-8 py-4 text-sm hover:bg-black hover:text-white transition-all duration-500'>Explore job</button>
         </div>
       </div>
-      <NewsletterBox/>
+      <NewsletterBox />
     </div>
   )
 }
