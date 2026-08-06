@@ -5,7 +5,9 @@ import connectDB from "./config/mongodb.js";
 import connectCloudinary from "./config/cloudinary.js";
 import userRoute from "./routes/userRoute.js";
 import prodRoute from "./routes/productRoute.js";
+import dns from "dns";
 // app config
+dns.setServers(['8.8.8.8', '8.8.4.4']);
 const app = express();
 const PORT = process.env.PORT || 4000;
 connectDB();
